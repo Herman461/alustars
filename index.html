@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css?_v=20221127195035">
-    <link rel="stylesheet" href="assets/css/plugins/fancybox.css?_v=20221127195035">
+    <link rel="stylesheet" href="assets/css/style.css?_v=20221128205535">
+    <link rel="stylesheet" href="assets/css/plugins/fancybox.css?_v=20221128205535">
 
 
-    <link rel="stylesheet" href="assets/css/pages/home.css?_v=20221127195035">
+    <link rel="stylesheet" href="assets/css/pages/home.css?_v=20221128205535">
 
 
 
@@ -19,7 +19,7 @@
 <body>
 
     <div class="wrapper">
-        <header class="header">
+        <header class="header header_main">
             <div class="header__container container">
                 <a href="/" class="header__logo">
                     <img src="assets/images/logo.svg" alt="">
@@ -51,8 +51,8 @@
                     </div>
                 </div>
                 <div class="header__actions">
-                    <a href="" class="header__action">Загрузить проект</a>
-                    <a href="" class="header__action">Заказать звонок</a>
+                    <a data-modal-link="project" href="" class="header__action">Загрузить проект</a>
+                    <a data-modal-link="phone-call" href="" class="header__action">Заказать звонок</a>
                 </div>
                 <div class="header__phones">
                     <a href="tel:79111112101" class="header__phone">+7 911 111 21 01</a>
@@ -84,7 +84,7 @@
                             <h1 class="main-block__title">Комплексное Остекление домов</h1>
                             <p class="main-block__text">Современные, светопрозрачные конструкции на основе алюминиевых и ПВХ профилей для вашего дома и офиса</p>
                             <div class="main-block__actions">
-                                <a data-modal-link="request" href="" class="main-block__button primary-button primary-button_circle">
+                                <a data-modal-link="consultation" href="" class="main-block__button primary-button primary-button_circle">
                                     <span>Оставить заявку</span>
                                 </a>
                                 <a class="main-block__button main-block__button_transparent link-button" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=zumJJUL_ruM" data-type="iframe" data-preload="false">
@@ -329,7 +329,7 @@
                                 <br>
                                 Предоставим лучшие комплексные решения для красоты, уюта и долговечности вашего дома.
                             </div>
-                            <a href="" class="project-page__link">
+                            <a data-modal-link="project" href="" class="project-page__link">
                                 <span>Загрузить проект</span>
                                 <svg>
                                     <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
@@ -500,7 +500,9 @@
                         <div class="subscribe-footer__input">
                             <input placeholder="Email" type="text" class="input">
                         </div>
-                        <a href="" class="subscribe-footer__button">Отправить</a>
+                        <a href="" class="subscribe-footer__button">
+                            <span>Отправить</span>
+                        </a>
                     </form>
                 </div>
                 <div class="footer__menu menu-footer">
@@ -576,7 +578,7 @@
 
 
     </div>
-    <div id="request" class="modal">
+    <div id="project" class="modal">
         <div class="modal__content">
             <div class="request">
                 <button data-modal-close="" type="button" class="request__close">
@@ -588,13 +590,13 @@
                     <img src="assets/images/black-logo.svg" alt="">
                 </a>
                 <p class="request__text">Заполните форму и наш специалист свяжется с вами</p>
-                <label for="name" class="request__label">Как можно к вам обращаться?</label>
+                <label for="project-name" class="request__label">Как можно к вам обращаться?</label>
                 <div class="request__input">
-                    <input placeholder="Ваше имя" id="name" type="text" class="input">
+                    <input placeholder="Ваше имя" id="project-name" type="text" class="input">
                 </div>
-                <label for="phone_number" class="request__label">Номер телефона</label>
+                <label for="project-phone-number" class="request__label">Номер телефона</label>
                 <div class="request__input">
-                    <input id="phone_number" value="+7" type="text" class="input phone">
+                    <input id="project-phone-number" value="+7" type="text" class="input phone">
                 </div>
                 <div class="request__files files-request">
                     <input type="file" multiple class="files-request__input">
@@ -620,11 +622,83 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20221127195035"></script>
-    <script src="assets/js/plugins/fancybox.umd.js?_v=20221127195035"></script>
-    <script src="assets/js/plugins/phone-mask.js?_v=20221127195035"></script>
-    <script src="assets/js/script.js?_v=20221127195035"></script>
-    <script src="assets/js/app.js?_v=20221127195035"></script>
+    <div id="consultation" class="modal">
+        <div class="modal__content">
+            <div class="request">
+                <button data-modal-close="" type="button" class="request__close">
+                    <svg>
+                        <use xlink:href="assets/images/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <a href="" class="request__logo">
+                    <img src="assets/images/black-logo.svg" alt="">
+                </a>
+                <p class="request__text">Заполните форму и наш специалист свяжется с вами</p>
+                <label for="consultation-name" class="request__label">Как можно к вам обращаться?</label>
+                <div class="request__input">
+                    <input placeholder="Ваше имя" id="consultation-name" type="text" class="input">
+                </div>
+                <label for="consultation-phone-number" class="request__label">Номер телефона</label>
+                <div class="request__input">
+                    <input id="consultation-phone-number" value="+7" type="text" class="input phone">
+                </div>
+                <label for="consultation-email" class="request__label">Email</label>
+                <div class="request__input">
+                    <input id="consultation-email" placeholder="youcompany@mail.ru" type="email" class="input">
+                </div>
+                <div class="request__input">
+                    <textarea placeholder="Кратко опишите ваш вопрос" class="input"></textarea>
+                </div>
+                <label class="request__checkbox checkbox">
+                    <input type="checkbox" class="checkbox__input">
+                    <span class="checkbox__text">
+                        <span>Я соглашаюсь на проверку <span>персональных данных</span>.</span>
+                    </span>
+                </label>
+                <button class="request__button primary-button">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <div id="phone-call" class="modal">
+        <div class="modal__content">
+            <div class="request">
+                <button data-modal-close="" type="button" class="request__close">
+                    <svg>
+                        <use xlink:href="assets/images/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <a href="" class="request__logo">
+                    <img src="assets/images/black-logo.svg" alt="">
+                </a>
+                <p class="request__text">Заполните форму и наш специалист свяжется с вами</p>
+                <label for="phone-call-name" class="request__label">Как можно к вам обращаться?</label>
+                <div class="request__input">
+                    <input placeholder="Ваше имя" id="phone-call-name" type="text" class="input">
+                </div>
+                <label for="phone-call-number" class="request__label">Номер телефона</label>
+                <div class="request__input">
+                    <input id="phone-call-number" value="+7" type="text" class="input phone">
+                </div>
+                <div class="request__input">
+                    <textarea placeholder="Кратко опишите ваш вопрос" class="input"></textarea>
+                </div>
+                <label class="request__checkbox checkbox">
+                    <input type="checkbox" class="checkbox__input">
+                    <span class="checkbox__text">
+                        <span>Я соглашаюсь на проверку <span>персональных данных</span>.</span>
+                    </span>
+                </label>
+                <button class="request__button primary-button">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20221128205535"></script>
+    <script src="assets/js/plugins/fancybox.umd.js?_v=20221128205535"></script>
+    <script src="assets/js/plugins/phone-mask.js?_v=20221128205535"></script>
+    <script src="assets/js/script.js?_v=20221128205535"></script>
+
+    <script src="assets/js/app.js?_v=20221128205535"></script>
 </body>
 
 </html>

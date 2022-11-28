@@ -499,31 +499,33 @@ let timeout = 300
 //
 //
 
+if (document.querySelector('.reviews-page__slider')) {
+    const imagesProductSlider = new Swiper('.reviews-page__slider', {
+        speed: 1000,
 
-const imagesProductSlider = new Swiper('.reviews-page__slider', {
-    speed: 1000,
-
-    slidesPerView: 1.1,
-    spaceBetween: 15,
-    pagination: {
-        el: '.images-product__dots',
-        clickable: true,
-    },
-    breakpoints: {
-        1028.98: {
-            spaceBetween: 20,
-            slidesPerView: 2.45
+        slidesPerView: 1.1,
+        spaceBetween: 15,
+        pagination: {
+            el: '.images-product__dots',
+            clickable: true,
         },
-        767.98: {
-            slidesPerView: 2.5
+        breakpoints: {
+            1028.98: {
+                spaceBetween: 20,
+                slidesPerView: 2.45
+            },
+            767.98: {
+                slidesPerView: 2.5
+            },
+            480.98: {
+                slidesPerView: 1.6
+            }
         },
-        480.98: {
-            slidesPerView: 1.6
-        }
-    },
 
 
-})
+    })
+
+}
 
 
 

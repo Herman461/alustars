@@ -65,6 +65,10 @@ body.lock {
   overflow: hidden;
 }
 
+.page__content {
+  padding-top: 70px;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,7 +99,7 @@ body.lock {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .stroke svg {
@@ -217,12 +221,17 @@ a {
 }
 
 .header {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 0.9px solid #BEBEBE;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+}
+
+.header_main {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .header__container {
@@ -467,6 +476,42 @@ a {
   background: #A9A9A9;
 }
 
+.more-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.more-button span {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 130%;
+  color: #000;
+  padding-right: 31px;
+}
+
+.more-button svg {
+  position: absolute;
+  top: calc(50% - 4px);
+  width: 20px;
+  height: 9px;
+  fill: #000;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  right: 0;
+}
+
+.top {
+  margin-bottom: 30px;
+}
+
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -694,9 +739,6 @@ textarea.input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
 }
 
 .subscribe-footer__logo {
@@ -793,6 +835,43 @@ textarea.input::placeholder {
   min-height: 44px;
   background: #FFE227;
   border-radius: 0px 6px 6px 0px;
+  position: relative;
+}
+
+.subscribe-footer__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(28.28deg, #F7825C -137.61%, #FFE227 82.9%);
+  opacity: 0;
+  z-index: 2;
+  border-radius: 0px 6px 6px 0px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.subscribe-footer__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFED7E;
+  -webkit-filter: blur(3.5px);
+  filter: blur(3.5px);
+  opacity: 0;
+  border-radius: 0px 6px 6px 0px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.subscribe-footer__button span {
+  position: relative;
+  z-index: 3;
 }
 
 .menu-footer {
@@ -1008,18 +1087,62 @@ textarea.input::placeholder {
 }
 
 @media (min-width: 1028.98px) {
+  .header__phones {
+    text-align: right;
+  }
+
+  .breadcrumbs {
+    margin: 0 0 40px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-height: 30px;
+  }
+
+  .breadcrumbs__item {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000;
+  }
+
+  .breadcrumbs__link {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A9A9A9;
+  }
+
+  .breadcrumbs__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .breadcrumbs__list li {
+    display: inline-block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin: 0 5px 0 0;
+    padding: 0 12px 0 0;
+    position: relative;
+    background: url("../images/icons/arrow-right.svg") right center no-repeat;
+  }
+
+  .breadcrumbs__list li:last-child {
+    margin: 0;
+    background: none;
+  }
+
+  .top__prev {
+    display: none;
+  }
+
   .footer__subscribe {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 407px;
     flex: 0 0 407px;
-  }
-
-  .footer__menu {
-    padding-top: 30px;
-  }
-
-  .footer__actions {
-    padding-top: 30px;
   }
 
   .actions-footer__phones {
@@ -1067,6 +1190,12 @@ textarea.input::placeholder {
   }
 }
 
+@media (min-width: 1028.98px) and (any-hover: hover) {
+  .breadcrumbs__link:hover {
+    text-decoration: underline;
+  }
+}
+
 @media (min-width: 1280px) {
   .footer__subscribe {
     margin-right: 101px;
@@ -1092,6 +1221,14 @@ textarea.input::placeholder {
 }
 
 @media (max-width: 1028.98px) {
+  .page__content {
+    padding-top: 30px;
+  }
+
+  .header_main {
+    border-bottom: none;
+  }
+
   .header {
     background: #fff;
     position: fixed;
@@ -1131,6 +1268,30 @@ textarea.input::placeholder {
 
   .title {
     font-size: 30px;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+
+  .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .top__prev {
+    margin-right: 10px;
+  }
+
+  .top__prev svg {
+    width: 9px;
+    height: 18px;
+    fill: #000;
   }
 
   .icon-menu {
@@ -1218,6 +1379,9 @@ textarea.input::placeholder {
   .footer__container {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1290,6 +1454,19 @@ textarea.input::placeholder {
   }
 
   .primary-button:hover::after {
+    opacity: 1;
+  }
+
+  .more-button:hover svg {
+    right: -16px;
+    width: 40px;
+  }
+
+  .subscribe-footer__button:hover::before {
+    opacity: 1;
+  }
+
+  .subscribe-footer__button:hover::after {
     opacity: 1;
   }
 
