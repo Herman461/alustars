@@ -502,7 +502,7 @@ let timeout = 300
 if (document.querySelector('.reviews-page__slider')) {
     const imagesProductSlider = new Swiper('.reviews-page__slider', {
         speed: 1000,
-
+        slideToClickedSlide: true,
         slidesPerView: 1.1,
         spaceBetween: 15,
         pagination: {
@@ -510,7 +510,7 @@ if (document.querySelector('.reviews-page__slider')) {
             clickable: true,
         },
         breakpoints: {
-            1028.98: {
+            1024.98: {
                 spaceBetween: 20,
                 slidesPerView: 2.45
             },

@@ -21,7 +21,7 @@
   transform: scale(1.1);
 }
 
-@media (min-width: 1028.98px) {
+@media (min-width: 1024.98px) {
   .catalog__container {
     position: relative;
   }
@@ -116,7 +116,7 @@
   }
 }
 
-@media (max-width: 1028.98px) {
+@media (max-width: 1024.98px) {
   .catalog__product {
     margin: 0 -40px;
     border-bottom: 0.5px solid #fff;

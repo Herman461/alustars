@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (iconMenu) {
         const menuContent = document.querySelector(".menu");
         iconMenu.addEventListener('click', function () {
-            document.body.classList.add("lock");
-            header.classList.add('active');
-            menuContent.classList.add("active");
+            document.body.classList.toggle("lock");
+            header.classList.toggle('active');
+            menuContent.classList.toggle("active");
+            iconMenu.classList.toggle('active')
         })
 
     }

@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="assets/css/plugins/fancybox.css?_v=20221205201243">
 
 
-    <link rel="stylesheet" href="assets/css/pages/catalog.css?_v=20221205201243">
+    <link rel="stylesheet" href="assets/css/pages/product.css?_v=20221205201243">
 
 
 
-    <title>Продукция</title>
+    <title>Окна</title>
 </head>
 
 <body>
@@ -69,164 +69,159 @@
 
         <main class="page">
             <div class="page__content">
-                <div class="catalog">
-                    <div class="catalog__container container">
+                <div class="product">
+                    <div class="product__container container">
                         <div class="breadcrumbs">
                             <ul class="breadcrumbs__list">
                                 <li>
                                     <a href="" class="breadcrumbs__link">Главная</a>
                                 </li>
                                 <li>
-                                    <span class="breadcrumbs__item">Продукция</span>
+                                    <a href="" class="breadcrumbs__link">Продукция</a>
+                                </li>
+                                <li>
+                                    <span class="breadcrumbs__item">Окна</span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="catalog__top top">
-                            <a href="" class="top__prev">
-                                <svg>
-                                    <use xlink:href="assets/images/icons/icons.svg#angle-left"></use>
-                                </svg>
-                            </a>
-                            <h1 class="top__title title">Продукция</h1>
-                        </div>
-                        <div class="catalog__product product-catalog">
-                            <div class="product-catalog__body">
-                                <div class="product-catalog__content">
-                                    <h2 class="product-catalog__title">Окна</h2>
-                                    <p class="product-catalog__text">
-                                        Теплые окна, собранные на основе алюминиевых или ПВХ профилей на нашем производстве, призваны сохранять тепло и уют в Вашем доме.
-                                        <br>
-                                        Вариации типов открывания и оснащение фурнитурными элементами дополнит удобство и эргономику от использования
-                                    </p>
-                                    <div class="product-catalog__more">
-                                        <a href="" class="more-button">
-                                            <span>Подробнее</span>
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="product-catalog__arrow">
+                        <div class="product__actions">
+                            <div class="product__top top">
+                                <a href="" class="top__prev">
                                     <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#arrow-up-right"></use>
+                                        <use xlink:href="assets/images/icons/icons.svg#angle-left"></use>
                                     </svg>
+                                </a>
+                                <h1 class="top__title title">Окна</h1>
+                            </div>
+                            <div class="product__type type-product">
+                                <button data-tab-title="aluminum" data-tab-category="type" type="button" tabindex="-1" class="type-product__button active">Алюминий</button>
+                                <button data-tab-title="plastic" data-tab-category="type" type="button" tabindex="-1" class="type-product__button">Пластиковые</button>
+                            </div>
+                        </div>
+                        <div data-tab-content="aluminum" data-tab-category="type" class="product__item active">
+                            <div class="product__intro intro-product">
+                                <div class="intro-product__image">
+                                    <img src="assets/images/product/intro/01.jpg" alt="">
+                                </div>
+                                <h1 class="intro-product__title">Высокий уровень
+                                    <br>энергоэффективности
+                                </h1>
+                            </div>
+                            <div class="product__content content-product">
+                                <div class="content-product__top">
+                                    <button data-tab-category="product" data-tab-title="product-1" type="button" tabindex="-1" class="content-product__button active">KÖMMERLING 88</button>
+                                    <button data-tab-category="product" data-tab-title="product-2" type="button" tabindex="-1" class="content-product__button">KÖMMERLING Aluclip</button>
+                                </div>
+                                <div data-tab-category="product" data-tab-content="product-1" class="content-product__body active">
+                                    <div class="content-product__info">
+                                        <div class="content-product__items">
+                                            <div class="content-product__item item-product-content">
+                                                <div class="item-product-content__body">
+                                                    <div class="item-product-content__image">
+                                                        <img src="assets/images/product/plastic-windows/1.jpg" alt="">
+                                                    </div>
+                                                    <h2 class="item-product-content__title item-product-content__title_big">KÖMMERLING 88</h2>
+                                                    <p class="item-product-content__text item-product-content__text_limit">KÖMMERLING 88 - это окно премиум-класса нового поколения. Прочная стабильная конструкция, позволяет применять 2-х камерное многофункциональное остекление, толщиной до 58 мм, а так же дает возможность конструировать большие окна с выдающимися показателями звукоизоляции, делая экстерьер любого здания привлекательным в сочетании. Кроме того, большие окна – источник дополнительной инсоляции, особенно в холодное время года, что дополнительно минимизируют потребление энергоресурсов и, следовательно, выбросы CO2.</p>
+                                                </div>
+                                            </div>
+                                            <div class="content-product__item item-product-content">
+                                                <div class="item-product-content__body">
+                                                    <div class="item-product-content__image">
+                                                        <img src="assets/images/product/plastic-windows/2.jpg" alt="">
+                                                    </div>
+                                                    <h3 class="item-product-content__title">Для любого экстерьера</h3>
+                                                    <p class="item-product-content__text">В дополнение к классическому белому, система предлагается в различных декоративных вариантах - от ламинированного исполнения «под дерево» до однотонных цветов и цветов «металлик» с возможностью двусторонней или односторонней отделки.</p>
+                                                </div>
+                                            </div>
+                                            <div class="content-product__item item-product-content">
+                                                <div class="item-product-content__body">
+                                                    <div class="item-product-content__image">
+                                                        <img src="assets/images/product/plastic-windows/3.jpg" alt="">
+                                                    </div>
+                                                    <h3 class="item-product-content__title">Экологичность</h3>
+                                                    <p class="item-product-content__text">Для производства профилей KÖMMERLING использует исключительно бессвинцовую рецептуру с "зелеными" стабилизаторами на основе кальция и цинка, а так же вторично переработанным ПВХ. Таким образом, устанавливая окна из профилей KÖMMERLING, вы можете быть уверены в их абсолютной экологической безопасности.</p>
+                                                </div>
+                                            </div>
+                                            <div class="content-product__item item-product-content">
+                                                <div class="item-product-content__body">
+                                                    <h3 class="item-product-content__title">Безопасность</h3>
+                                                    <p class="item-product-content__text">Больше безопасности благодаря встроенной защите от взлома.</p>
+                                                </div>
+                                            </div>
+                                            <div class="content-product__item content-product__item_table item-product-content">
+                                                <h3 class="item-product-content__title">Техническая информация</h3>
+                                                <table class="item-product-content__table table-product">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Монтажная ширина</td>
+                                                            <td>70 мм</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Монтажная ширина</td>
+                                                            <td>70 мм</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Монтажная ширина</td>
+                                                            <td>70 мм</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Монтажная ширина</td>
+                                                            <td>70 мм</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Монтажная ширина</td>
+                                                            <td>70 мм</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Монтажная ширина</td>
+                                                            <td>70 мм</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="content-product__images content-product__images_pair">
+                                            <div class="content-product__image ibg">
+                                                <img src="assets/images/product/plastic-windows/1.jpg" alt="">
+                                            </div>
+                                            <div class="content-product__image ibg">
+                                                <img src="assets/images/product/plastic-windows/2.jpg" alt="">
+                                            </div>
+                                            <div class="content-product__image ibg">
+                                                <img src="assets/images/product/plastic-windows/3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="content-product__table table-product">
+                                        <tbody>
+                                            <tr>
+                                                <td>Монтажная ширина</td>
+                                                <td>70 мм</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Монтажная ширина</td>
+                                                <td>70 мм</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Монтажная ширина</td>
+                                                <td>70 мм</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Монтажная ширина</td>
+                                                <td>70 мм</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Монтажная ширина</td>
+                                                <td>70 мм</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Монтажная ширина</td>
+                                                <td>70 мм</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <a href="" class="product-catalog__image">
-                                <img src="assets/images/products/01.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="catalog__product product-catalog">
-                            <div class="product-catalog__body">
-                                <div class="product-catalog__content">
-                                    <h2 class="product-catalog__title">Двери</h2>
-                                    <p class="product-catalog__text">
-                                        Алюминиевые входные двери современные, очень легкие и прочные. Премиальные модели ручной работы от Alustars – настоящие шедевры.
-                                        <br>
-                                        Как только вы почувствуете поверхность и материал, Вам раскроется все совершенство этих входных дверей.
-                                    </p>
-                                    <div class="product-catalog__more">
-                                        <a href="" class="more-button">
-                                            <span>Подробнее</span>
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-
-
-                                <div class="product-catalog__arrow">
-                                    <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#arrow-up-right"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="" class="product-catalog__image">
-                                <img src="assets/images/products/02.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="catalog__product product-catalog">
-                            <div class="product-catalog__body">
-                                <div class="product-catalog__content">
-                                    <h2 class="product-catalog__title">Порталы</h2>
-                                    <p class="product-catalog__text">
-                                        В основе принципа действия подъемно-раздвижного механизма – роликовые каретки, выступающие из подвижной створки при повороте ручки. Слегка приподняв створку, каретки мягко отводят ее в сторону, позволяя плавно, без физического усилия, открывать ее на нужный промежуток. Выполненные из алюминиевого или ПВХ профиля и стекла
-                                    </p>
-                                    <div class="product-catalog__more">
-                                        <a href="" class="more-button">
-                                            <span>Подробнее</span>
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-catalog__arrow">
-                                    <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#arrow-up-right"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="" class="product-catalog__image">
-                                <img src="assets/images/products/03.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="catalog__product product-catalog">
-                            <div class="product-catalog__body">
-                                <div class="product-catalog__content">
-                                    <h2 class="product-catalog__title">Террасы</h2>
-                                    <p class="product-catalog__text">
-                                        Есть много причин для строительства зимнего сада или остекления террасы. С точки зрения практичности – чтобы расширить жилое пространство. С эмоциональной точки зрения – чтобы жить на лоне природы. А с эстетической – чтобы придать особую элегантность вполне обычному жилому дому
-                                    </p>
-                                    <div class="product-catalog__more">
-                                        <a href="" class="more-button">
-                                            <span>Подробнее</span>
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-catalog__arrow">
-                                    <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#arrow-up-right"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="" class="product-catalog__image">
-                                <img src="assets/images/products/04.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="catalog__product product-catalog">
-                            <div class="product-catalog__body">
-                                <div class="product-catalog__content">
-                                    <h2 class="product-catalog__title">Перегородки</h2>
-                                    <p class="product-catalog__text">
-                                        Интерьерные перегородки выполняют как эстетическую, так и практическую роль. Ими можно частично или полностью закрыть проем одного пространства. Это может быть офисное помещение, квартира или загородный дом – на каждый случай есть свои технические решения.
-                                    </p>
-                                    <div class="product-catalog__more">
-                                        <a href="" class="more-button">
-                                            <span>Подробнее</span>
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-
-
-                                <div class="product-catalog__arrow">
-                                    <svg>
-                                        <use xlink:href="assets/images/icons/icons.svg#arrow-up-right"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <a href="" class="product-catalog__image">
-                                <img src="assets/images/products/05.jpg" alt="">
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -448,7 +443,6 @@
         </div>
     </div>
 
-    <script src="assets/js/pages/catalog.js?_v=20221205201243"></script>
     <script src="assets/js/script.js?_v=20221205201243"></script>
 
     <script src="assets/js/app.js?_v=20221205201243"></script>
